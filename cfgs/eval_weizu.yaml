@@ -1,0 +1,6 @@
+dset:
+  test:
+    data_dir: /DATA/bvac/personal/reserach/font_gen/mxfont/data/images/traindata_infer  # path to reference images
+    source_font: "/DATA/bvac/personal/reserach/font_gen/mxfont/weizu_fonts/Arial-Unicode.ttf"    # path to .ttf file used as the source font during the generation
+    gen_chars_file: /DATA/bvac/personal/reserach/font_gen/mxfont/data/weizu_gen.json   # path to file of the characters to generate. Leave blank if you want to generate all the available characters in the source font.
+batch_size: 4

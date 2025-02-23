@@ -1,0 +1,2 @@
+font2img.py用法：传入ttf_path表示字体地址，chara表示所需渲染的字符，save_path表示保存地址，输出为每个字体，每个字符的渲染图
+get_chars_from_ttf.py用法：传入ttf文件目录，输出每个ttf所支持的字符txt
