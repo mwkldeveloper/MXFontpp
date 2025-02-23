@@ -19,7 +19,7 @@ conda install numpy scipy scikit-image tqdm jsonlib-python3 fonttools
 # Usage
 
 Note that, we only provide the example font files; not the font files used for the training the provided weight *(generator.pth)*.
-The example font files are downloaded from [here](https://www.freechinesefont.com/tag/commercial-use-ok/).
+The example font files are downloaded from here. The ckpt can be found in [here](https://drive.google.com/drive/folders/1x1DahG0ilAnbL-8o6mq_C2fMas_udpYq?usp=drive_link).
 
 ## Preparing Data
 * The examples of datasets are in *(./data)*
@@ -135,7 +135,7 @@ python eval.py \
 This project is distributed under [MIT license](LICENSE), except [modules.py](models/modules/modules.py) which is adopted from https://github.com/NVlabs/FUNIT.
 
 ```
-MX-Font
+MX-Font++
 Copyright (c) 2021-present NAVER Corp.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -159,5 +159,5 @@ THE SOFTWARE.
 
 ## Acknowledgement
 
-This project is based on [clovaai/dmfont](https://github.com/clovaai/dmfont) and [clovaai/lffont](https://github.com/clovaai/lffont).
+This project is based on [clovaai/dmfont](https://github.com/clovaai/dmfont), [clovaai/mxfont](https://github.com/clovaai/mxfont) and [clovaai/lffont](https://github.com/clovaai/lffont).
 
