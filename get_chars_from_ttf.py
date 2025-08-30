@@ -31,7 +31,8 @@ def main():
     for each in tqdm(ttffiles):
         try:
             process_ttffile(each)
-        except:
+        except Exception as e:
+            print(f"Error: {each} {e}")
             continue
 
 

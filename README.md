@@ -12,7 +12,14 @@
 * sconf, numpy, scipy, scikit-image, tqdm, jsonlib, fonttools
 
 ```
-conda install numpy scipy scikit-image tqdm jsonlib-python3 fonttools
+conda create -n mxfont python=3.11
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu129
+```
+
+```
+conda install numpy scipy scikit-image tqdm fonttools
+pip install sconf einops jsonlib-python3
+pip install -U Pillow==9.5
 ```
 
 
