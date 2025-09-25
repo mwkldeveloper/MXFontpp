@@ -1,0 +1,5 @@
+tqdm
+fonttools
+sconf
+einops
+scipy
