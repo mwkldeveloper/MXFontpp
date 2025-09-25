@@ -7,6 +7,7 @@ MIT license
 from fontTools.ttLib import TTFont
 from PIL import Image, ImageFont, ImageDraw
 import numpy as np
+import PIL
 
 
 def get_defined_chars(fontfile):
@@ -36,7 +37,15 @@ def read_font(fontfile, size=150):
 
 
 def render(font, char, size=(128, 128), pad=20):
-    width, height = font.getsize(char)
+    pil_version = PIL.__version__
+    # Convert version string to tuple of integers for proper comparison
+    version_parts = tuple(map(int, pil_version.split(".")))
+    if version_parts > (9, 5, 0):
+        bbox = font.getbbox(char)
+        width, height = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    else:
+        width, height = font.getsize(char)
+
     max_size = max(width, height)
 
     if width < height:
