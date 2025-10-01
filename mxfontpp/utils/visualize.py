@@ -68,6 +68,13 @@ def save_tensor_to_image(tensor, filepath, scale=None):
     """ Save torch tensor to filepath
     Same as torchvision.save_image; only scale factor is difference.
     """
+    im = tensor_to_image(tensor, scale)
+    im.save(filepath)
+
+def tensor_to_image(tensor, scale=None):
+    """ Save torch tensor to filepath
+    Same as torchvision.save_image; only scale factor is difference.
+    """
     tensor = normalize(tensor)
     ndarr = tensor.mul(255).clamp(0, 255).byte().permute(1, 2, 0).cpu().numpy()
     if ndarr.shape[-1] == 1:
@@ -76,4 +83,4 @@ def save_tensor_to_image(tensor, filepath, scale=None):
     if scale:
         size = tuple(map(lambda v: int(v*scale), im.size))
         im = im.resize(size, resample=Image.BILINEAR)
-    im.save(filepath)
+    return im

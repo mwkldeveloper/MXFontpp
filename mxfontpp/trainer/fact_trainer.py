@@ -12,7 +12,7 @@ from .base_trainer import BaseTrainer
 from .trainer_utils import cyclize, binarize_labels, expert_assign
 from .hsic import RbfHSIC
 
-import utils
+from .. import utils
 from itertools import combinations
 from tqdm import tqdm
 

@@ -10,7 +10,7 @@ from .style_encoder import style_enc_builder
 from .experts import exp_builder
 from .decoder import dec_builder
 
-import utils
+from .. import utils
 
 
 class Generator(nn.Module):

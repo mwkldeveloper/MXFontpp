@@ -10,7 +10,7 @@ import torch
 from torch.nn.parallel import DistributedDataParallel as DDP
 import torch.nn.functional as F
 
-import utils
+from .. import utils
 from .trainer_utils import has_bn
 from .criterions import g_crit, d_crit, fm_crit
 from pathlib import Path

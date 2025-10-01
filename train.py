@@ -19,13 +19,13 @@ import torch.utils.data.distributed
 from torchvision import transforms
 import numpy as np
 from sconf import Config, dump_args
-import utils
-from utils import Logger
+import mxfontpp.utils
+from mxfontpp.utils import Logger
 
-from models import Generator, disc_builder, aux_clf_builder
-from models.modules import weights_init
-from trainer import FactTrainer, Evaluator, load_checkpoint
-from datasets import get_trn_loader, get_val_loader
+from mxfontpp.models import Generator, disc_builder, aux_clf_builder
+from mxfontpp.models.modules import weights_init
+from mxfontpp.trainer import FactTrainer, Evaluator, load_checkpoint
+from mxfontpp.datasets import get_trn_loader, get_val_loader
 
 
 def setup_args_and_config():

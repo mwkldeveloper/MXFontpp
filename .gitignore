@@ -3,3 +3,6 @@ others/*
 *.png
 *.zip 
 **/__pycache__/** 
+results/*
+*egg-info/*
+build/*

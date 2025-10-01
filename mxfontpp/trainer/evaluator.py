@@ -5,7 +5,7 @@ MIT license
 """
 
 import torch
-import utils
+from .. import utils
 
 
 def torch_eval(val_fn):
