@@ -63,11 +63,13 @@ class MXFontpp:
                     source_imgs: torch.Tensor, 
                     ref_imgs: torch.Tensor, 
                     return_pil_image: bool = False) -> list[Image.Image] | list[torch.Tensor]:
-        ref_batches = torch.split(ref_imgs, 3)
-        style_facts = self.get_style_facts(ref_batches)
 
         source_imgs = source_imgs.to(self.device)
         ref_imgs = ref_imgs.to(self.device)
+
+        ref_batches = torch.split(ref_imgs, 3)
+        style_facts = self.get_style_facts(ref_batches)
+
         # replicate style facts for each source image
         style_facts = {
             k: v.repeat(source_imgs.shape[0], *([1] * (v.dim() - 1))) for k, v in style_facts.items()
