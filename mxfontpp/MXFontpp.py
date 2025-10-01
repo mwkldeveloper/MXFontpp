@@ -42,7 +42,7 @@ class MXFontpp:
             self.load_weight(weight_path)
 
     def load_weight(self, weight_path, weights_only=False):
-        weight = torch.load(weight_path, weights_only=weights_only)
+        weight = torch.load(weight_path, weights_only=weights_only, map_location=self.device)
         if "generator_ema" in weight:
             weight = weight["generator_ema"]
         self.gen.load_state_dict(weight)
